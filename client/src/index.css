@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --primary: #3b82f6;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+  }
+  
+  .dark {
+    --background: #0f172a;
+    --surface: #1e293b;
+    --primary: #60a5fa;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+  
+  body {
+    @apply bg-[var(--background)] text-[var(--text-main)] antialiased transition-colors duration-300;
+  }
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-white/20 dark:border-slate-700/50 shadow-sm;
+}
